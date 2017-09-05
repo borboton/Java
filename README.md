@@ -1,6 +1,11 @@
 ###### Sobrecarga
+
 Cuando en una clase, se definen un mismo método, con diferente número de parámetros, o bien con el mismo numero de parámetros pero diferenciándose en la definición, en la cual, al menos un parámetro sea de diferente tipo, cuando esto sucede, se dice que el método está sobrecargado.
+###### Sobrescritura 
+
+
 -------------
+
 ###### Constructores
 Un Constructor  es una función, método, etc,  de las clases, la cual es llamada automáticamente cuando se crea un objeto de esa clase.
 Por ser métodos, los constructores también aceptan parámetros. Cuando en una clase no especificamos ningún tipo de constructor, el compilador añade uno público por omisión sin parámetros, el cual NO hace nada.
@@ -15,6 +20,9 @@ Por ser métodos, los constructores también aceptan parámetros. Cuando en una 
 ###### Clases
 Si la clase es abstracta no podrá ser 
 instanciada sino a partir de sus clases derivadas.
+
+-------------
+
 ###### Types of Variable
 
 static variables
@@ -33,6 +41,8 @@ public  = todos acceden
 private = Acceden  ... 
 protected = solo dentro del mismo package 
 ```
+-------------
+
 ###### Patrones de diseño 
 GOF patrones de diseño 
 Singleton patrones de diseño 
