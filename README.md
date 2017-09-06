@@ -3,7 +3,7 @@
 ArrayList en Java, es una clase que permite almacenar datos en memoria de forma similar a los Arrays, con la ventaja de que el numero de elementos que almacena, lo hace de forma dinámica, es decir, que no es necesario declarar su tamaño como pasa con los Arrays.
 
 Métodos para trabajar con los ArrayList son los siguientes:
-
+```
 // Declaración de un ArrayList de "String". Puede ser de cualquier otro Elemento u Objeto (float, Boolean, Object, ...)
 ArrayList<String> nombreArrayList = new ArrayList<String>();
 // Añade el elemento al ArrayList
@@ -32,7 +32,7 @@ nombreArrayList.isEmpty();
 ArrayList arrayListCopia = (ArrayList) nombreArrayList.clone();  
 // Pasa el ArrayList a un Array 
 Object[] array = nombreArrayList.toArray();   
-
+```
 
 ###### Sobrecarga
 
