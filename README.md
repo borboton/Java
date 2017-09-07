@@ -80,7 +80,11 @@ ArrayList arrayListCopia = (ArrayList) nombreArrayList.clone();
 Object[] array = nombreArrayList.toArray();   
 ```
 ###### Controller Clase ClubController 
-
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
 ```
 package edu.utn.controller;
 import java.util.ArrayList;
