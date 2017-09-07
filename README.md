@@ -72,59 +72,24 @@ ArrayList en Java, es una clase que permite almacenar datos en memoria de forma 
 Métodos para trabajar con los ArrayList son los siguientes:
 // Declaración de un ArrayList de "String". Puede ser de cualquier otro Elemento u Objeto (float, Boolean, Object, ...)
 ```java
-ArrayList<String> nombreArrayList = new ArrayList<String>();
-```
-// Añade el elemento al ArrayList
-```java
-nombreArrayList.add("Elemento");
-```
-// Añade el elemento al ArrayList en la posición 'n'
-```java
-nombreArrayList.add(n, "Elemento 2");
-```
-// Devuelve el numero de elementos del ArrayList
-```java
-nombreArrayList.size();
-```
-// Devuelve el elemento que esta en la posición '2' del ArrayList
-```java
-nombreArrayList.get(2);
-```
-// Comprueba se existe del elemento ('Elemento') que se le pasa como parametro
-```java
-nombreArrayList.contains("Elemento");
-```
-// Devuelve la posición de la primera ocurrencia ('Elemento') en el ArrayList  
-```java
-nombreArrayList.indexOf("Elemento");
-```
-// Devuelve la posición de la última ocurrencia ('Elemento') en el ArrayList   
-```java
-nombreArrayList.lastIndexOf("Elemento");
-```
-// Borra el elemento de la posición '5' del ArrayList   
-```java
-nombreArrayList.remove(5); 
-```
-// Borra la primera ocurrencia del 'Elemento' que se le pasa como parametro.  
-```java
-nombreArrayList.remove("Elemento");
-```
-//Borra todos los elementos de ArrayList   
-```java
-nombreArrayList.clear();
-```
-// Devuelve True si el ArrayList esta vacio. Sino Devuelve False   
-```java
-nombreArrayList.isEmpty();  
-```
-// Copiar un ArrayList 
-```java
-ArrayList arrayListCopia = (ArrayList) nombreArrayList.clone();  
-```
-// Pasa el ArrayList a un Array 
-```java
-Object[] array = nombreArrayList.toArray();   
+ArrayList<String> nombreArrayList = new ArrayList<String>();// Añade el elemento al ArrayList
+nombreArrayList.add("Elemento");// Añade el elemento al ArrayList en la posición 'n'
+nombreArrayList.add(n, "Elemento 2");// Devuelve el numero de elementos del ArrayList
+nombreArrayList.size();// Devuelve el elemento que esta en la posición '2' del ArrayList
+nombreArrayList.get(2);// Comprueba se existe del elemento ('Elemento') que se le pasa como parametro
+nombreArrayList.contains("Elemento");// Devuelve la posición de la primera ocurrencia ('Elemento') en el ArrayList  
+nombreArrayList.indexOf("Elemento");// Devuelve la posición de la última ocurrencia ('Elemento') en el ArrayList   
+nombreArrayList.lastIndexOf("Elemento");// Borra el elemento de la posición '5' del ArrayList   
+nombreArrayList.remove(5);// Borra la primera ocurrencia del 'Elemento' que se le pasa como parametro.  
+nombreArrayList.remove("Elemento");//Borra todos los elementos de ArrayList   
+nombreArrayList.clear();// Devuelve True si el ArrayList esta vacio. Sino Devuelve False   
+nombreArrayList.isEmpty(); // Copiar un ArrayList 
+ArrayList arrayListCopia = (ArrayList) nombreArrayList.clone();// Pasa el ArrayList a un Array 
+Object[] array = nombreArrayList.toArray();// Pasa el ArrayList a un Array 
+ 
+for (Jugador jugador : club1.getListaJugadores()) {
+			System.out.println(jugador);
+		}
 ```
 ###### Controller Clase ClubController 
 
