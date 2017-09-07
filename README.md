@@ -79,6 +79,30 @@ ArrayList arrayListCopia = (ArrayList) nombreArrayList.clone();
 ```
 Object[] array = nombreArrayList.toArray();   
 ```
+###### Controller Clase ClubController 
+
+```
+package edu.utn.controller;
+import java.util.ArrayList;
+import edu.utn.model.Club;
+
+public class ClubController {
+	private ArrayList<Club> listaClubes;
+
+	public ClubController() {
+		this.listaClubes = new ArrayList<Club>();
+	}
+
+	public ArrayList<Club> getListaClubes() {
+		return listaClubes;
+	}
+
+	public void addClub(Club club) {
+		this.listaClubes.add(club);
+	}	
+}
+```
+
 ```
 for (Jugador jugador : club1.getListaJugadores()) {
 			System.out.println(jugador);
