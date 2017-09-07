@@ -1,3 +1,4 @@
+
 ###### public, final, abstract
 Una clase contiene elementos, llamados miembros, que pueden ser datos, llamados
 atributos, y funciones que manipulan esos datos llamados métodos.
@@ -34,7 +35,7 @@ madre Number, y se pueden instanciar.
 Por todo lo dicho, una clase no puede ser final y abstract a la vez (ya que la
 clase abstract requiere descendientes).
 
-######extends
+###### Extends
 La instrucción extends indica de qué clase desciende la nuestra. Si se omite,
 Java asume que desciende de la superclase object.
 Cuando una clase desciende de otra, significa que hereda sus atributos y sus
@@ -45,13 +46,13 @@ subclases de otros paquetes.
 
 -------------
 
-######Ciclo de Vida de los Objetos
+###### Ciclo de Vida de los Objetos
 Cuando se ejecuta un programa orientado a objetos ocurren tres sucesos.
 1. Los objetos se crean a medida que se necesitan.
 2. Los mensajes se mueven de un objeto a otro (o del usuario a un objeto) a medida que el programa procesa información o responde a la entrada del usuario.
 3. Cuando los objetos ya no se necesitan, se borran y se libera la memoria.
 
-######El objeto actual (puntero this)
+###### El objeto actual (puntero this)
 Nunca se puede llamar una función miembro de una clase a menos que se asocie
 con un objeto (una instancia de la clase). ¿Cómo sabe una función miembro cuál es la
 instancia de una clase (el objeto específico) asociada con ella?.
