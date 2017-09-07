@@ -1,4 +1,7 @@
 ###### public, final, abstract
+Una clase contiene elementos, llamados miembros, que pueden ser datos, llamados
+atributos, y funciones que manipulan esos datos llamados métodos.
+
 Definir una clase como pública (public) significa que puede ser usada por
 cualquier clase en cualquier paquete (package) Si no lo es, solamente puede ser
 utilizada por clases del mismo paquete (un paquete, básicamente, es un grupo de
@@ -15,9 +18,52 @@ conceptos. Por ejemplo, la clase Number es una clase abstracta que representa
 cualquier tipo de números (y sus métodos no están implementados: son abstractos); las
 clases descendientes de ésta, como Integer o Float, sí implementan los métodos de la
 madre Number, y se pueden instanciar.
+
 Por todo lo dicho, una clase no puede ser final y abstract a la vez (ya que la
 clase abstract requiere descendientes).
 
+Una clase final (final) es aquella que no puede tener clases que la hereden.
+Esto se utiliza básicamente por razones de seguridad (para que una clase no pueda ser
+reemplazada por otra que la herede), o por diseño de la aplicación.
+Una clase abstracta (abstract) es una clase que puede tener derivadas, pero no
+puede ser instanciada. Es literalmente abstracta. ¿Para qué sirve? Para modelar
+conceptos. Por ejemplo, la clase Number es una clase abstracta que representa
+cualquier tipo de números (y sus métodos no están implementados: son abstractos); las
+clases descendientes de ésta, como Integer o Float, sí implementan los métodos de la
+madre Number, y se pueden instanciar.
+Por todo lo dicho, una clase no puede ser final y abstract a la vez (ya que la
+clase abstract requiere descendientes).
+
+######extends
+La instrucción extends indica de qué clase desciende la nuestra. Si se omite,
+Java asume que desciende de la superclase object.
+Cuando una clase desciende de otra, significa que hereda sus atributos y sus
+métodos. Esto quiere decir que, a menos que los redefinamos, sus métodos serán los
+mismos que los de la clase madre y podrán utilizarse en forma transparente, siempre y
+cuando no sean privados en la clase madre, o protegidos o propios del paquete para
+subclases de otros paquetes.
+
+-------------
+
+######Ciclo de Vida de los Objetos
+Cuando se ejecuta un programa orientado a objetos ocurren tres sucesos.
+1. Los objetos se crean a medida que se necesitan.
+2. Los mensajes se mueven de un objeto a otro (o del usuario a un objeto) a medida que el programa procesa información o responde a la entrada del usuario.
+3. Cuando los objetos ya no se necesitan, se borran y se libera la memoria.
+
+######El objeto actual (puntero this)
+Nunca se puede llamar una función miembro de una clase a menos que se asocie
+con un objeto (una instancia de la clase). ¿Cómo sabe una función miembro cuál es la
+instancia de una clase (el objeto específico) asociada con ella?.
+El método utilizado por Java es añadir un argumento extra oculto a las
+funciones miembro. Este argumento es un puntero al objeto de la clase que los enlaza
+con la función asociada y recibe un nombre especial denominado this.
+Dentro de una función miembro, this apunta al objeto asociado con la invocación
+de la función miembro. Normalmente, el programador no necesita preocuparse por este
+puntero, ya que el lenguaje realiza la operación automáticamente transparente a las
+funciones miembro que la utilizan.
+
+-------------
 ###### ArrayList
 
 ArrayList en Java, es una clase que permite almacenar datos en memoria de forma similar a los Arrays, con la ventaja de que el numero de elementos que almacena, lo hace de forma dinámica, es decir, que no es necesario declarar su tamaño como pasa con los Arrays.
