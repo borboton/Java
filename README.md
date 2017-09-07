@@ -1,9 +1,22 @@
+es e interfaces relacionadas, como los paquetes de biblioteca incluidos con
+Java).
+Una clase final (final) es aquella que no puede tener clases que la hereden.
+Esto se utiliza básicamente por razones de seguridad (para que una clase no pueda ser
+reemplazada por otra que la herede), o por diseño de la aplicación.
+Una clase abstracta (abstract) es una clase que puede tener derivadas, pero no
+puede ser instanciada. Es literalmente abstracta. ¿Para qué sirve? Para modelar
+conceptos. Por ejemplo, la clase Number es una clase abstracta que representa
+cualquier tipo de números (y sus métodos no están implementados: son abstractos); las
+clases descendientes de ésta, como Integer o Float, sí implementan los métodos de la
+madre Number, y se pueden instanciar.
+Por todo lo dicho, una clase no puede ser final y abstract a la vez (ya que la
+clase abstract requiere descendientes).
+
 ###### ArrayList
 
 ArrayList en Java, es una clase que permite almacenar datos en memoria de forma similar a los Arrays, con la ventaja de que el numero de elementos que almacena, lo hace de forma dinámica, es decir, que no es necesario declarar su tamaño como pasa con los Arrays.
 
 Métodos para trabajar con los ArrayList son los siguientes:
-```
 // Declaración de un ArrayList de "String". Puede ser de cualquier otro Elemento u Objeto (float, Boolean, Object, ...)
 ArrayList<String> nombreArrayList = new ArrayList<String>();
 // Añade el elemento al ArrayList
@@ -32,7 +45,7 @@ nombreArrayList.isEmpty();
 ArrayList arrayListCopia = (ArrayList) nombreArrayList.clone();  
 // Pasa el ArrayList a un Array 
 Object[] array = nombreArrayList.toArray();   
-```
+
 
 ###### Sobrecarga
 
