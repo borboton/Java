@@ -23,18 +23,6 @@ madre Number, y se pueden instanciar.
 Por todo lo dicho, una clase no puede ser final y abstract a la vez (ya que la
 clase abstract requiere descendientes).
 
-Una clase final (final) es aquella que no puede tener clases que la hereden.
-Esto se utiliza básicamente por razones de seguridad (para que una clase no pueda ser
-reemplazada por otra que la herede), o por diseño de la aplicación.
-Una clase abstracta (abstract) es una clase que puede tener derivadas, pero no
-puede ser instanciada. Es literalmente abstracta. ¿Para qué sirve? Para modelar
-conceptos. Por ejemplo, la clase Number es una clase abstracta que representa
-cualquier tipo de números (y sus métodos no están implementados: son abstractos); las
-clases descendientes de ésta, como Integer o Float, sí implementan los métodos de la
-madre Number, y se pueden instanciar.
-Por todo lo dicho, una clase no puede ser final y abstract a la vez (ya que la
-clase abstract requiere descendientes).
-
 ###### Extends
 La instrucción extends indica de qué clase desciende la nuestra. Si se omite,
 Java asume que desciende de la superclase object.
