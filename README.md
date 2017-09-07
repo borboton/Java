@@ -1,8 +1,14 @@
-es e interfaces relacionadas, como los paquetes de biblioteca incluidos con
+public, final, abstract
+Definir una clase como pública (public) significa que puede ser usada por
+cualquier clase en cualquier paquete (package) Si no lo es, solamente puede ser
+utilizada por clases del mismo paquete (un paquete, básicamente, es un grupo de
+Clases e interfaces relacionadas, como los paquetes de biblioteca incluidos con
 Java).
+
 Una clase final (final) es aquella que no puede tener clases que la hereden.
 Esto se utiliza básicamente por razones de seguridad (para que una clase no pueda ser
 reemplazada por otra que la herede), o por diseño de la aplicación.
+
 Una clase abstracta (abstract) es una clase que puede tener derivadas, pero no
 puede ser instanciada. Es literalmente abstracta. ¿Para qué sirve? Para modelar
 conceptos. Por ejemplo, la clase Number es una clase abstracta que representa
