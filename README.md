@@ -120,6 +120,23 @@ for (Jugador jugador : club1.getListaJugadores()) {
 ###### Sobrecarga
 
 Cuando en una clase, se definen un mismo método, con diferente número de parámetros, o bien con el mismo numero de parámetros pero diferenciándose en la definición, en la cual, al menos un parámetro sea de diferente tipo, cuando esto sucede, se dice que el método está sobrecargado.
+```java
+public class Vehiculo {
+
+	private Motor motor;
+	private String marca;
+	private String modelo;
+
+	public Vehiculo(Motor motor) {
+		this.motor = motor;
+	}
+
+	public Vehiculo(Motor motor, String marca, String modelo) {
+		this.motor = motor;
+		this.marca = marca;
+		this.modelo = modelo;
+	}
+```
 ###### Sobrescritura 
 ```java
 @Override
