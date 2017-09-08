@@ -1,7 +1,10 @@
 ###### Try Catch y debugger
 
 ###### Herencia y polimorfismo 
-![Alt text](http://4.bp.blogspot.com/_WN7v-RkApUc/TK8Z-Sdb_jI/AAAAAAAAAAQ/bwkEWvNFWNM/s1600/herencia.png"Optional title")
+![ScreenShot](https://raw.github.com/{username}/{repository}/{branch}/{path})
+
+
+
 ###### Extends
 La instrucción extends indica de qué clase desciende la nuestra. Si se omite,
 Java asume que desciende de la superclase object.
