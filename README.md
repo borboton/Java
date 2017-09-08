@@ -1,3 +1,16 @@
+###### Try Catch y debugger
+
+###### Herencia y polimorfismo 
+![Alt text](http://4.bp.blogspot.com/_WN7v-RkApUc/TK8Z-Sdb_jI/AAAAAAAAAAQ/bwkEWvNFWNM/s1600/herencia.png"Optional title")
+###### Extends
+La instrucción extends indica de qué clase desciende la nuestra. Si se omite,
+Java asume que desciende de la superclase object.
+Cuando una clase desciende de otra, significa que hereda sus atributos y sus
+métodos. Esto quiere decir que, a menos que los redefinamos, sus métodos serán los
+mismos que los de la clase madre y podrán utilizarse en forma transparente, siempre y
+cuando no sean privados en la clase madre, o protegidos o propios del paquete para
+subclases de otros paquetes.
+
 
 ###### public, final, abstract
 Una clase contiene elementos, llamados miembros, que pueden ser datos, llamados
@@ -23,14 +36,7 @@ madre Number, y se pueden instanciar.
 Por todo lo dicho, una clase no puede ser final y abstract a la vez (ya que la
 clase abstract requiere descendientes).
 
-###### Extends
-La instrucción extends indica de qué clase desciende la nuestra. Si se omite,
-Java asume que desciende de la superclase object.
-Cuando una clase desciende de otra, significa que hereda sus atributos y sus
-métodos. Esto quiere decir que, a menos que los redefinamos, sus métodos serán los
-mismos que los de la clase madre y podrán utilizarse en forma transparente, siempre y
-cuando no sean privados en la clase madre, o protegidos o propios del paquete para
-subclases de otros paquetes.
+
 
 -------------
 
