@@ -1,11 +1,11 @@
-###### Try Catch y debugger
+##### Try Catch y debugger
 
-###### Herencia y polimorfismo 
+##### Herencia y polimorfismo 
 ![ScreenShot](https://raw.github.com/{username}/{repository}/{branch}/{path})
 
 
 
-###### Extends
+##### Extends
 La instrucción extends indica de qué clase desciende la nuestra. Si se omite,
 Java asume que desciende de la superclase [Object.](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html)
 Cuando una clase desciende de otra, significa que hereda sus atributos y sus
@@ -13,9 +13,81 @@ métodos. Esto quiere decir que, a menos que los redefinamos, sus métodos será
 mismos que los de la clase madre y podrán utilizarse en forma transparente, siempre y
 cuando no sean privados en la clase madre, o protegidos o propios del paquete para
 subclases de otros paquetes.
+##### Sobrecarga
 
+Cuando en una clase, se definen un mismo método, con diferente número de parámetros, o bien con el mismo numero de parámetros pero diferenciándose en la definición, en la cual, al menos un parámetro sea de diferente tipo, cuando esto sucede, se dice que el método está sobrecargado.
+```java
+package com.utn.modelo;
 
-###### public, final, abstract
+public class Auto extends Vehiculo {
+
+	private boolean luneta;
+	
+	public Auto(Motor motor) {
+		super(motor);
+	}
+
+	public Auto(Motor motor, String marca, String modelo) {
+		super(motor, marca, modelo);
+	}
+}
+
+-------------
+package com.utn.modelo;
+
+public class Vehiculo {
+
+	private Motor motor;
+	private String marca;
+	private String modelo;
+
+	public Vehiculo(Motor motor) {
+		this.motor = motor;
+	}
+
+	public Vehiculo(Motor motor, String marca, String modelo) {
+		this.motor = motor;
+		this.marca = marca;
+		this.modelo = modelo;
+	}
+}
+
+-------------
+package com.utn.modelo;
+
+public class Motor {
+
+	
+	private long cc;
+	private String combustible;
+	private String numSerie;
+
+	// sobre carga de constructor vacio
+	public Motor() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Motor(long cc, String combustible) {
+		this.cc = cc;
+		this.combustible = combustible;
+	}
+	
+	// sobrecarga de constructores
+	// el mismo contrato pero distinta firma
+	public Motor(String combustible, long cc) {
+		this.cc = cc;
+		this.combustible = combustible;
+	}
+	
+	// sobre carga con 2 string
+	public Motor(String numMotor, String combustible) {
+		this.numSerie = numMotor;
+		this.combustible = combustible;
+	}
+
+```
+
+##### Clases Public, Final, Abstract
 Una clase contiene elementos, llamados miembros, que pueden ser datos, llamados
 atributos, y funciones que manipulan esos datos llamados métodos.
 
@@ -39,17 +111,33 @@ madre Number, y se pueden instanciar.
 Por todo lo dicho, una clase no puede ser final y abstract a la vez (ya que la
 clase abstract requiere descendientes).
 
+ 
 
+##### Constructores
+Un Constructor  es una función, método, etc,  de las clases, la cual es llamada automáticamente cuando se crea un objeto de esa clase.
+Por ser métodos, los constructores también aceptan parámetros. Cuando en una clase no especificamos ningún tipo de constructor, el compilador añade uno público por omisión sin parámetros, el cual NO hace nada.
+##### Características de los Constructores
+```
+1.Un constructor, tiene el mismo nombre de la clase a la cual pertenece.
+2.No puede ser Heredado.
+3.No retorna ningún valor (Ni void), por lo cual no debe especificarse ningún tipo de dato.
+4.Debe declararse como public, sólo en casos realmente extraordinarios será de otro tipo.
+```
+-------------
+
+##### Clases
+Si la clase es abstracta no podrá ser 
+instanciada sino a partir de sus clases derivadas.
 
 -------------
 
-###### Ciclo de Vida de los Objetos
+##### Ciclo de Vida de los Objetos
 Cuando se ejecuta un programa orientado a objetos ocurren tres sucesos.
 1. Los objetos se crean a medida que se necesitan.
 2. Los mensajes se mueven de un objeto a otro (o del usuario a un objeto) a medida que el programa procesa información o responde a la entrada del usuario.
 3. Cuando los objetos ya no se necesitan, se borran y se libera la memoria.
 
-###### El objeto actual (puntero this)
+##### El objeto actual (puntero this)
 Nunca se puede llamar una función miembro de una clase a menos que se asocie
 con un objeto (una instancia de la clase). ¿Cómo sabe una función miembro cuál es la
 instancia de una clase (el objeto específico) asociada con ella?.
@@ -62,7 +150,55 @@ puntero, ya que el lenguaje realiza la operación automáticamente transparente 
 funciones miembro que la utilizan.
 
 -------------
-###### ArrayList
+
+
+
+##### Sobrescritura 
+```java
+@Override
+	public String toString() {
+		return "Jugador [nombre=" + nombre + ", apellido=" + apellido + ", posicion=" + posicion + ", titular="
+				+ titular + "]";
+	} 
+```
+
+
+
+-------------
+
+##### Types of Variable
+
+static variables
+se dice que son atributos de clase si se usa la palabra clave static: en ese caso la
+variable es única para todas las instancias (objetos) de la clase (ocupa un único lugar en memoria). Cuando usamos “static final” se dice que creamos una constante de clase, un atributo común a todos los objetos de esa clase. 
+
+final: en este contexto indica que una variable es de tipo constante: no admitirá cambios
+ después de su declaración y asignación de valor. final determina que un atributo no puede ser sobrescrito o redefinido. O sea: no funcionará como una variable “tradicional”, sino como una constante. 
+Toda constante declarada con final ha de ser inicializada en el mismo momento de
+ declararla. final también se usa como palabra clave en otro contexto: una clase final (final) es aquella que no puede tener clases que la hereden.
+
+##### Static Methods
+Static blocks of code.
+```java
+public var = todos acceden 
+private var = Acceden  ... 
+protected var = solo dentro del mismo package 
+```
+-------------
+
+##### Patrones de diseño 
+GOF patrones de diseño 
+Singleton patrones de diseño 
+
+Modelo: Esta capa representa todo lo que tiene que ver con el acceso a datos: guardar, actualizar, obtener datos, además todo el código de la lógica del negocio, básicamente son las clases Java y parte de la lógica de negocio.
+Clases : "Cuenta.java Persona.java"
+Vista: La vista tiene que ver con la presentación de datos del modelo y lo que ve el usuario, por lo general una vista es la representación visual de un modelo (POJO o clase java). Clase : "Test.java"
+Por ejemplo el modelo usuario que es una clase en Java y que tiene como propiedades, nombre y apellido debe pertenecer a una vista en la que el usuario vea esas propiedades.
+Controlador: El controlador es el encargado de conectar el modelo con las vistas, funciona como un puente entre la vista y el modelo, el controlador recibe eventos generados por el usuario desde las vistas y se encargar de direccionar al modelo la petición respectiva. Clase : "Contenedor.java" 
+Por ejemplo el usuario quiere ver los clientes con apellido Álvarez, la petición va al controlador y el se encarga de utilizar el modelo adecuado y devolver ese modelo a la vista.
+Si te das cuenta en ningún momento interactúan directamente la vista con el modelo, esto también mantiene la seguridad en una aplicación.
+
+##### ArrayList
 
 ArrayList en Java, es una clase que permite almacenar datos en memoria de forma similar a los Arrays, con la ventaja de que el numero de elementos que almacena, lo hace de forma dinámica, es decir, que no es necesario declarar su tamaño como pasa con los Arrays.
 
@@ -83,12 +219,8 @@ nombreArrayList.clear();// Devuelve True si el ArrayList esta vacio. Sino Devuel
 nombreArrayList.isEmpty(); // Copiar un ArrayList 
 ArrayList arrayListCopia = (ArrayList) nombreArrayList.clone();// Pasa el ArrayList a un Array 
 Object[] array = nombreArrayList.toArray();// Pasa el ArrayList a un Array 
- 
-for (Jugador jugador : club1.getListaJugadores()) {
-			System.out.println(jugador);
-		}
 ```
-###### Controller Clase ClubController 
+##### Controller Clase ClubController 
 
 ```java
 package edu.utn.controller;
@@ -111,93 +243,9 @@ public class ClubController {
 	}	
 }
 ```
-
+##### ForEach
 ```java
 for (Jugador jugador : club1.getListaJugadores()) {
 			System.out.println(jugador);
 		}
 ```
-###### Sobrecarga
-
-Cuando en una clase, se definen un mismo método, con diferente número de parámetros, o bien con el mismo numero de parámetros pero diferenciándose en la definición, en la cual, al menos un parámetro sea de diferente tipo, cuando esto sucede, se dice que el método está sobrecargado.
-```java
-public class Vehiculo {
-
-	private Motor motor;
-	private String marca;
-	private String modelo;
-
-	public Vehiculo(Motor motor) {
-		this.motor = motor;
-	}
-
-	public Vehiculo(Motor motor, String marca, String modelo) {
-		this.motor = motor;
-		this.marca = marca;
-		this.modelo = modelo;
-	}
-```
-###### Sobrescritura 
-```java
-@Override
-	public String toString() {
-		return "Jugador [nombre=" + nombre + ", apellido=" + apellido + ", posicion=" + posicion + ", titular="
-				+ titular + "]";
-	} 
-```
-
--------------
-
-###### Constructores
-Un Constructor  es una función, método, etc,  de las clases, la cual es llamada automáticamente cuando se crea un objeto de esa clase.
-Por ser métodos, los constructores también aceptan parámetros. Cuando en una clase no especificamos ningún tipo de constructor, el compilador añade uno público por omisión sin parámetros, el cual NO hace nada.
-###### Características de los Constructores
-```
-1.Un constructor, tiene el mismo nombre de la clase a la cual pertenece.
-2.No puede ser Heredado.
-3.No retorna ningún valor (Ni void), por lo cual no debe especificarse ningún tipo de dato.
-4.Debe declararse como public, sólo en casos realmente extraordinarios será de otro tipo.
-```
--------------
-###### Clases
-Si la clase es abstracta no podrá ser 
-instanciada sino a partir de sus clases derivadas.
-
--------------
-
-###### Types of Variable
-
-static variables
-se dice que son atributos de clase si se usa la palabra clave static: en ese caso la
-variable es única para todas las instancias (objetos) de la clase (ocupa un único lugar en memoria). Cuando usamos “static final” se dice que creamos una constante de clase, un atributo común a todos los objetos de esa clase. 
-
-final: en este contexto indica que una variable es de tipo constante: no admitirá cambios
- después de su declaración y asignación de valor. final determina que un atributo no puede ser sobrescrito o redefinido. O sea: no funcionará como una variable “tradicional”, sino como una constante. 
-Toda constante declarada con final ha de ser inicializada en el mismo momento de
- declararla. final también se usa como palabra clave en otro contexto: una clase final (final) es aquella que no puede tener clases que la hereden.
-
-###### Static Methods
-Static blocks of code.
-```java
-public var = todos acceden 
-private var = Acceden  ... 
-protected var = solo dentro del mismo package 
-```
--------------
-
-###### Patrones de diseño 
-GOF patrones de diseño 
-Singleton patrones de diseño 
-
-Modelo: Esta capa representa todo lo que tiene que ver con el acceso a datos: guardar, actualizar, obtener datos, además todo el código de la lógica del negocio, básicamente son las clases Java y parte de la lógica de negocio.
-Clases : "Cuenta.java Persona.java"
-
-Vista: La vista tiene que ver con la presentación de datos del modelo y lo que ve el usuario, por lo general una vista es la representación visual de un modelo (POJO o clase java). Clase : "Test.java"
-
-Por ejemplo el modelo usuario que es una clase en Java y que tiene como propiedades, nombre y apellido debe pertenecer a una vista en la que el usuario vea esas propiedades.
-
-Controlador: El controlador es el encargado de conectar el modelo con las vistas, funciona como un puente entre la vista y el modelo, el controlador recibe eventos generados por el usuario desde las vistas y se encargar de direccionar al modelo la petición respectiva. Clase : "Contenedor.java" 
-
-Por ejemplo el usuario quiere ver los clientes con apellido Álvarez, la petición va al controlador y el se encarga de utilizar el modelo adecuado y devolver ese modelo a la vista.
-
-Si te das cuenta en ningún momento interactúan directamente la vista con el modelo, esto también mantiene la seguridad en una aplicación.
