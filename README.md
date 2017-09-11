@@ -7,7 +7,7 @@
 
 ###### Extends
 La instrucción extends indica de qué clase desciende la nuestra. Si se omite,
-Java asume que desciende de la superclase ![object.](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html)
+Java asume que desciende de la superclase [a link](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html)
 Cuando una clase desciende de otra, significa que hereda sus atributos y sus
 métodos. Esto quiere decir que, a menos que los redefinamos, sus métodos serán los
 mismos que los de la clase madre y podrán utilizarse en forma transparente, siempre y
