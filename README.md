@@ -2,13 +2,73 @@
 
 ##### Herencia y polimorfismo 
 
-
 En casos en que se vea involucrada la herencia, los constructores toman un significado especial porque lo normal es que la subclase necesite que se ejecute el constructor de la superclase antes que su propio constructor, para que se inicialicen correctamente aquellas variables que deriven de la superclase. En C++ y Java, la sintaxis para conseguir esto es sencilla y consiste en incluir en el cuerpo del constructor de la subclase como primera línea de código la siguiente sentencia:
 
+```java
   super( parametros_opcionales );
-Esto hará que se ejecute el constructor de la superclase, utilizando los parámetros que se pasen para la inicialización. 
-![ScreenShot](https://raw.github.com/{username}/{repository}/{branch}/{path})
+```
 
+Esto hará que se ejecute el constructor de la superclase, utilizando los parámetros que se pasen para la inicialización. 
+Esto hará que se ejecute el constructor de la superclase, utilizando los parámetros que se pasen para la inicialización. En el código del ejemplo siguiente, java508.java, se ilustra el uso de esta palabra clase para llamar al constructor de la superclase desde una subclase.
+
+```java 
+class SuperClase {
+    int varInstancia;
+      
+    // Es necesario proporcionar el constructor por defecto,que
+    // es aquel que no tiene parametros de llamada
+    SuperClase(){}
+      
+    // Este es el constructor parametrizado de la superclase
+    SuperClase( int pDato ) {
+        System.out.println( 
+            "Dentro del constructor de la SuperClase" ); 
+        varInstancia = pDato; 
+        }
+      
+    void verVarInstancia() {
+        System.out.println( "El Objeto contiene " + varInstancia );
+        }
+    }
+```
+```java      
+class SubClase extends SuperClase {
+    // Este es el constructor parametrizado de la subclase
+    SubClase( int bDato ) {    
+        // La siguiente sentencia println no compila, la llamada
+        // a super() debe estar al principio de un metodo en caso de
+        // que aparezca
+        // System.out.println( "En el constructor de la SubClase" ); 
+      
+        // Llamamos al constructor de la superclase
+        super( bDato );
+        System.out.println( 
+            "Dentro del constructor de la SubClase" );
+        }
+    }
+```
+```java   
+class java508 {
+    public static void main( String args[] ) {
+        System.out.println( "Lanzando la aplicacion" );
+      
+        // Instanciamos un objeto de este tipo llamando al
+        // constructor de defecto 
+        java508 obj = new java508();
+        // Llamamos a la funcion pasandole un constructor de la
+        // subclase parametrizado como parametro
+        obj.miFuncion( new SubClase( 100 ) );
+        }
+      
+        // Esta funcion recibe un objeto y llama a uno de sus metodos
+        // para presentar en pantalla el dato que contiene el objeto,
+        // en este caso el metodo es heredado de la SuperClase
+        void miFuncion( SubClase objeto ) {
+            objeto.verVarInstancia();
+        }
+    }
+```
+Si super no aparece como primera sentencia del cuerpo de un constructor, el compilador Java inserta una llamada implícita, super(), al constructor de la superclase inmediata. Es decir, el constructor por defecto de la superclase es invocado automáticamente cuando se ejecuta el constructor para una nueva subclase, si no se especifica un constructor parametrizado para llamar al constructor de la superclase.
 
 
 ##### Extends
