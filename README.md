@@ -1,6 +1,12 @@
 ##### Try Catch y debugger
 
 ##### Herencia y polimorfismo 
+
+
+En casos en que se vea involucrada la herencia, los constructores toman un significado especial porque lo normal es que la subclase necesite que se ejecute el constructor de la superclase antes que su propio constructor, para que se inicialicen correctamente aquellas variables que deriven de la superclase. En C++ y Java, la sintaxis para conseguir esto es sencilla y consiste en incluir en el cuerpo del constructor de la subclase como primera línea de código la siguiente sentencia:
+
+  super( parametros_opcionales );
+Esto hará que se ejecute el constructor de la superclase, utilizando los parámetros que se pasen para la inicialización. 
 ![ScreenShot](https://raw.github.com/{username}/{repository}/{branch}/{path})
 
 
