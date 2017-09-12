@@ -1,6 +1,26 @@
 ##### Try Catch y debugger
 
-##### Herencia y polimorfismo 
+##### Herencia y polimorfismo
+La herencia es el mecanismo por el que se crean nuevos objetos definidos en términos de objetos ya existentes. Por ejemplo, si se tiene la clase Ave, se puede crear la subclase Pato, que es una especialización de Ave.
+```java
+    class Pato extends Ave {
+        int numero_de_patas;
+    }
+```
+La palabra clave extends se usa para generar una subclase (especialización) de un objeto. Un Pato es una subclase de Ave. Cualquier cosa que contenga la definición de Ave será copiada a la clase Pato, además, en Pato se pueden definir sus propios métodos y variables de instancia. Se dice que Pato deriva o hereda de Ave.
+Por ejemplo, de la clase aparato con motor y de la clase animal no se puede derivar nada, sería como obtener el objeto toro mecánico a partir de una máquina motorizada (aparato con motor) y un toro (aminal). En realidad, lo que se pretende es copiar los métodos, es decir, pasar la funcionalidad del toro de verdad al toro mecánico, con lo cual no sería necesaria la herencia múltiple sino simplemente la compartición de funcionalidad que se encuentra implementada en Java a través de interfaces.
+
+Subclases
+
+Como ya se ha indicado en múltiples ocasiones en esta sección, cuando se puede crear nuevas clases por herencia de clases ya existentes, las nuevas clases se llaman subclases, mientras que las clases de donde hereda se llaman superclases.
+
+Cualquier objeto de la subclase contiene todas las variables y todos los métodos de la superclase y sus antecesores.
+
+Todas las clases en Java derivan de alguna clase anterior. La clase raíz del árbol de la jerarquía de clases de Java es la clase Object, definida en el paquete java.lang. Cada vez que se desciende en el árbol de jerarquía, las clases van siendo más especializadas.
+
+Cuando se desee que nadie pueda derivar de una clase, se indica que es final; y lo mismo con los métodos, si no se desea que se puedan sobreescribir, se les antepone la palabra clave final.
+
+Lo contrario de final es abstract. Una clase marcada como abstracta, únicamente está diseñada para crear subclases a partir de ella, no siendo posible instanciar ningún objeto a partir de una clase abstracta.
 
 En casos en que se vea involucrada la herencia, los constructores toman un significado especial porque lo normal es que la subclase necesite que se ejecute el constructor de la superclase antes que su propio constructor, para que se inicialicen correctamente aquellas variables que deriven de la superclase. En C++ y Java, la sintaxis para conseguir esto es sencilla y consiste en incluir en el cuerpo del constructor de la subclase como primera línea de código la siguiente sentencia:
 
