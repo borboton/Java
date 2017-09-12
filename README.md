@@ -243,13 +243,16 @@ final: en este contexto indica que una variable es de tipo constante: no admitir
 Toda constante declarada con final ha de ser inicializada en el mismo momento de
  declararla. final también se usa como palabra clave en otro contexto: una clase final (final) es aquella que no puede tener clases que la hereden.
 
-##### Static Methods
-Static blocks of code.
-```java
-public var = todos acceden 
-private var = Acceden  ... 
-protected var = solo dentro del mismo package 
-```
+##### Control de Acceso
+
+El control de acceso también tiene un significado especial cuando se trata de constructores. Aunque en otra sección se trata a fondo el tela del control de acceso en Java, con referencia a los constructores se puede decir que el control de acceso que se indique determina la forma en que otros objetos van a pode instanciar objetos de la clase. En la siguiente descripción, se indica cómo se trata el control de acceso cuando se tienen entre manos a los constructores:
+
+1. private
+Ninguna otra clase puede instanciar objetos de la clase. La clase puede contener métodos públicos, y estos métodos pueden construir un objeto y devolverlo, pero nadie más puede hacerlo.
+2. protected
+Solamente las subclases de la clase pueden crear instancias de ella.
+3. public
+Cualquier otra clase puede crear instancias de la clase.
 -------------
 
 ##### Patrones de diseño 
