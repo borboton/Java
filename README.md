@@ -1,6 +1,48 @@
 ##### Operador instanceOf
 
-##### Try Catch y debugger
+##### Captura de Excepciones
+
+      Throwable 
+          | 
+ _____________________
+ |                   | 
+Error            Exception 
+ |                   | 
+···        ____________________
+           |                  | 
+          ···          RuntimeException 
+                              | 
+                             ···
+
+Creamos una clase que extienda de Exception, llamada en este caso MiExcepcion y que contenga el tratamiento de la excepción:
+```java
+package local.modelo;
+ 
+public class MiExcepcion extends Exception{
+    // Constructor
+    public MiExcepcion(){};
+    
+    // Excepcion: Error Provocado
+    public String excErrorPersonalizado(){
+        return "Error provocado.";
+    }
+}
+```
+
+```java
+package local.vista;
+    public static void main(String[] args) {        
+        try{
+            System.out.println("Provocando un error en 3, 2, 1...");
+            throw new MiExcepcion();
+        }catch(MiExcepcion ex){
+            System.out.println(ex.excErrorPersonalizado());
+        }
+    }
+}
+```
+Try Catch y debugger
+
 
 ##### Herencia y polimorfismo
 La herencia es el mecanismo por el que se crean nuevos objetos definidos en términos de objetos ya existentes. Por ejemplo, si se tiene la clase Ave, se puede crear la subclase Pato, que es una especialización de Ave.
