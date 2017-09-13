@@ -2,17 +2,15 @@
 
 ##### Captura de Excepciones
 ```
-      Throwable 
-          | 
- _____________________
- |                   | 
-Error            Exception 
- |                   | 
-···        ____________________
-           |                  | 
-          ···          RuntimeException 
-                              | 
-                             ···
+    Throwable 
+       | 
+  +----+-----+ 
+  |          | 
+Error    Exception 
+  |          |
+ ···   +-----+-----+
+       |           |
+      ···   RuntimeException 
 ```
 Creamos una clase que extienda de Exception, llamada en este caso MiExcepcion y que contenga el tratamiento de la excepción:
 ```java
