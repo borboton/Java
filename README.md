@@ -1,7 +1,7 @@
 ##### Operador instanceOf
 
 ##### Captura de Excepciones
-
+```
       Throwable 
           | 
  _____________________
@@ -13,7 +13,7 @@ Error            Exception
           ···          RuntimeException 
                               | 
                              ···
-
+```
 Creamos una clase que extienda de Exception, llamada en este caso MiExcepcion y que contenga el tratamiento de la excepción:
 ```java
 package local.modelo;
