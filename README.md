@@ -1,3 +1,5 @@
+##### Enum static 
+
 ##### Operador instanceOf
 
 ##### Captura de Excepciones
