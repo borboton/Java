@@ -1,4 +1,21 @@
 ##### Vector arrayList String[] int[] String... 
+```java
+public static Inmueble creoInmueble(TipoInmueble imueble) {
+
+		switch (imueble) {
+		case CASA:
+			return new Casa();
+		case DEPARTAMENTO:
+			return new Departamento();
+		case PH:
+			return new PH();
+		case LOTE:
+			return new Lote();
+		}
+		return null;
+	}
+
+```
 
 ##### Enum static 
 
