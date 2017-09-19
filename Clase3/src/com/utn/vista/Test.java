@@ -27,11 +27,10 @@ public class Test {
 		System.out.println(m.getMotor().getCc());
 		System.out.println(m.getMotor().getCombustible());
 	
-		Vehiculo v1 = new Auto(new Motor(2000l, "Gasoil"),"Peugeot","308");
+//		Vehiculo v1 = new Auto(new Motor(2000l, "Gasoil"),"Peugeot","308");
+//		Vehiculo v2 = new Moto(motorcito,"Honda","VStrom");
 		
-		Vehiculo v2 = new Moto(motorcito,"Honda","VStrom");
-		
-		v2 = new Auto(new Motor(2000l, "Gasoil"),"Peugeot","308");
+//		v2 = new Auto(new Motor(2000l, "Gasoil"),"Peugeot","308");
 		
 		
 		
