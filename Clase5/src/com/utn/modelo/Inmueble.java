@@ -10,7 +10,7 @@ public class Inmueble {
 	private double valor;
 
 	public Inmueble(int cantAmbientes, double metrosCuadrados, String[] servicios, double valor) {
-		super();
+
 		this.cantAmbientes = cantAmbientes;
 		this.metrosCuadrados = metrosCuadrados;
 		this.servicios = servicios;

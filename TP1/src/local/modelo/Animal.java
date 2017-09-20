@@ -2,7 +2,6 @@ package local.modelo;
 
 public class Animal {
 	
-	//private String tipo;
 	private String nombre;
 	private String raza;
 	private int	edad;
@@ -13,9 +12,8 @@ public class Animal {
 	
 	}
 	
-	public Animal(String nombre, String tipo, String raza, int edad) {
+	public Animal(String nombre, String raza, int edad) {
 		this.nombre = nombre;
-	//	this.tipo = tipo;
 		this.raza = raza;
 		this.edad = edad;	
 	}
@@ -24,8 +22,6 @@ public class Animal {
 		System.out.println("roar...");
 	}
 	
-	
-
 	public String getNombre() {
 		return nombre;
 	}
@@ -34,17 +30,6 @@ public class Animal {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
-
-//	public String getTipo() {
-//		return tipo;
-//	}
-//
-//
-//	public void setTipo(String tipo) {
-//		this.tipo = tipo;
-//	}
-
 
 	public String getRaza() {
 		return raza;
@@ -59,7 +44,6 @@ public class Animal {
 	public int getEdad() {
 		return edad;
 	}
-
 
 	public void setEdad(int edad) {
 		this.edad = edad;
