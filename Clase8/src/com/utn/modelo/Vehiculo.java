@@ -12,6 +12,32 @@ public abstract class Vehiculo {
 	private String modelo;
 	private String color;
 
+	
+	public Vehiculo() {
+	
+	}
+
+	public Vehiculo(String marca, String modelo, String color) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.color = color;
+	}
+	
+	public abstract void encender(Motor motor);
+
+	public abstract void apagar(String tipo);
+
+	// para la sobre-carga tambien aplicar en los metodos abstractos
+	public abstract void encender();
+
+	public void tocarBocina() {
+		System.out.println("pi-pi");
+	}
+
+	public void tocarBocina(String claxton) {
+		System.out.println(claxton);
+	}
+	
 	public String getMarca() {
 		return marca;
 	}
@@ -33,31 +59,6 @@ public abstract class Vehiculo {
 	}
 
 	public void setColor(String color) {
-		this.color = color;
-	}
-
-	public abstract void encender(Motor motor);
-
-	public abstract void apagar(String tipo);
-
-	// para la sobre-carga tambien aplicar en los metodos abstractos
-	public abstract void encender();
-
-	public void tocarBocina() {
-		System.out.println("pi-pi");
-	}
-
-	public void tocarBocina(String claxton) {
-		System.out.println(claxton);
-	}
-
-	public Vehiculo() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public Vehiculo(String marca, String modelo, String color) {
-		this.marca = marca;
-		this.modelo = modelo;
 		this.color = color;
 	}
 
