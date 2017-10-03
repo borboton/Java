@@ -1,7 +1,4 @@
-package vista;
-
-import modelo.Motor;
-import modelo.Vehiculo;
+package modelo;
 
 public class Moto extends Vehiculo {
 
