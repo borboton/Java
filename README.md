@@ -1,4 +1,27 @@
-##### Vector arrayList String[] int[] String... 
+###### Static vs non Static 
+El método main siempre es un método estático, ya que cuando se invoca no existen objetos creados con anterioridad porque la ejecución del programa aún no ha comenzado.
+
+Los atributos miembros de una clase pueden ser atributos de clase o atributos de instancia; se dice que son atributos de clase si se usa la palabra clave static: 
+
+Los métodos de clase (static) tienen estas limitaciones:
+
+1. No pueden acceder a campos de instancia (Los campos van asociados a objetos).
+2. No pueden invocar a un método de instancia de la misma clase (Los métodos de instancia van asociados a objetos).
+
+###### Constructor 
+###### Eancapsulamiento 
+###### Vectores 
+###### Exceptions 
+###### Herencia  -- clase 
+###### Sobrecarga 
+###### Fatoria Abstracta
+###### Final Mutabilidad e inmutabilidad 
+###### Enumerador 
+
+
+
+
+
 ```java
 public static Inmueble creoInmueble(TipoInmueble imueble) {
 
@@ -18,8 +41,8 @@ public static Inmueble creoInmueble(TipoInmueble imueble) {
 ```
 
 ##### Enum static 
-
 ##### Operador instanceOf
+
 
 ##### Captura de Excepciones
 ```
@@ -91,8 +114,8 @@ En casos en que se vea involucrada la herencia, los constructores toman un signi
   super( parametros_opcionales );
 ```
 
-Esto hará que se ejecute el constructor de la superclase, utilizando los parámetros que se pasen para la inicialización. 
-Esto hará que se ejecute el constructor de la superclase, utilizando los parámetros que se pasen para la inicialización. En el código del ejemplo siguiente, java508.java, se ilustra el uso de esta palabra clase para llamar al constructor de la superclase desde una subclase.
+Esto hará que se ejecute el constructor de la superclase, utilizando los parámetros que se pasen para la inicialización.
+En el código del ejemplo siguiente, java508.java, se ilustra el uso de esta palabra clase para llamar al constructor de la superclase desde una subclase.
 
 ```java 
 class SuperClase {
@@ -263,15 +286,18 @@ clase abstract requiere descendientes).
  
 
 ##### Constructores
+
 Un Constructor  es una función, método, etc,  de las clases, la cual es llamada automáticamente cuando se crea un objeto de esa clase.
-Por ser métodos, los constructores también aceptan parámetros. Cuando en una clase no especificamos ningún tipo de constructor, el compilador añade uno público por omisión sin parámetros, el cual NO hace nada.
+Por ser métodos, los constructores también aceptan parámetros. 
+
+Cuando en una clase no especificamos ningún tipo de constructor, el compilador añade uno público por omisión sin parámetros, el cual NO hace nada.
+
 ##### Características de los Constructores
-```
-1.Un constructor, tiene el mismo nombre de la clase a la cual pertenece.
-2.No puede ser Heredado.
-3.No retorna ningún valor (Ni void), por lo cual no debe especificarse ningún tipo de dato.
-4.Debe declararse como public, sólo en casos realmente extraordinarios será de otro tipo.
-```
+
+1. Un constructor, tiene el mismo nombre de la clase a la cual pertenece.
+2. No puede ser Heredado.
+3. No retorna ningún valor (Ni void), por lo cual no debe especificarse ningún tipo de dato.
+4. Debe declararse como public, sólo en casos realmente extraordinarios será de otro tipo.
 -------------
 
 ##### Clases
@@ -282,25 +308,18 @@ instanciada sino a partir de sus clases derivadas.
 
 ##### Ciclo de Vida de los Objetos
 Cuando se ejecuta un programa orientado a objetos ocurren tres sucesos.
+
 1. Los objetos se crean a medida que se necesitan.
 2. Los mensajes se mueven de un objeto a otro (o del usuario a un objeto) a medida que el programa procesa información o responde a la entrada del usuario.
 3. Cuando los objetos ya no se necesitan, se borran y se libera la memoria.
 
 ##### El objeto actual (puntero this)
-Nunca se puede llamar una función miembro de una clase a menos que se asocie
-con un objeto (una instancia de la clase). ¿Cómo sabe una función miembro cuál es la
-instancia de una clase (el objeto específico) asociada con ella?.
-El método utilizado por Java es añadir un argumento extra oculto a las
-funciones miembro. Este argumento es un puntero al objeto de la clase que los enlaza
-con la función asociada y recibe un nombre especial denominado this.
-Dentro de una función miembro, this apunta al objeto asociado con la invocación
-de la función miembro. Normalmente, el programador no necesita preocuparse por este
-puntero, ya que el lenguaje realiza la operación automáticamente transparente a las
-funciones miembro que la utilizan.
+Nunca se puede llamar una función miembro de una clase a menos que se asocie con un objeto (una instancia de la clase). ¿Cómo sabe una función miembro cuál es la instancia de una clase (el objeto específico) asociada con ella?.
+
+El método utilizado por Java es añadir un argumento extra oculto a las funciones miembro. Este argumento es un puntero al objeto de la clase que los enlaza con la función asociada y recibe un nombre especial denominado this. 
+Dentro de una función miembro, this apunta al objeto asociado con la invocación de la función miembro. Normalmente, el programador no necesita preocuparse por este puntero, ya que el lenguaje realiza la operación automáticamente transparente a las funciones miembro que la utilizan.
 
 -------------
-
-
 
 ##### Sobrescritura 
 ```java
@@ -319,10 +338,10 @@ funciones miembro que la utilizan.
 
 static variables
 se dice que son atributos de clase si se usa la palabra clave static: en ese caso la
-variable es única para todas las instancias (objetos) de la clase (ocupa un único lugar en memoria). Cuando usamos “static final” se dice que creamos una constante de clase, un atributo común a todos los objetos de esa clase. 
+variable es única para todas las instancias (objetos) de la clase (ocupa un único lugar en memoria). Cuando usamos static final se dice que creamos una constante de clase, un atributo común a todos los objetos de esa clase. 
 
 final: en este contexto indica que una variable es de tipo constante: no admitirá cambios
- después de su declaración y asignación de valor. final determina que un atributo no puede ser sobrescrito o redefinido. O sea: no funcionará como una variable “tradicional”, sino como una constante. 
+ después de su declaración y asignación de valor. final determina que un atributo no puede ser sobrescrito o redefinido. O sea: no funcionará como una variable tradicional, sino como una constante. 
 Toda constante declarada con final ha de ser inicializada en el mismo momento de
  declararla. final también se usa como palabra clave en otro contexto: una clase final (final) es aquella que no puede tener clases que la hereden.
 
@@ -351,6 +370,29 @@ Por ejemplo el usuario quiere ver los clientes con apellido Álvarez, la petici�
 Si te das cuenta en ningún momento interactúan directamente la vista con el modelo, esto también mantiene la seguridad en una aplicación.
 
 ##### ArrayList
+
+##### Vector arrayList String[] int[] String... 
+
+```java
+private Animal[] animalAtendido;
+private int cant;
+
+public void setAnimalAtendido(Animal animalAtendido) {
+		
+		try {
+			this.animalAtendido[cant] = animalAtendido;
+			cant++;
+			
+		} catch (Exception e) {
+			System.out.println("Supero el limite de animales atendidos por doctor" );
+		} 
+	}
+public Animal[] getAnimalAtendido() {
+	
+		return animalAtendido;
+	
+	}
+```
 
 ArrayList en Java, es una clase que permite almacenar datos en memoria de forma similar a los Arrays, con la ventaja de que el numero de elementos que almacena, lo hace de forma dinámica, es decir, que no es necesario declarar su tamaño como pasa con los Arrays.
 
