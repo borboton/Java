@@ -13,6 +13,7 @@ public class VehiculoControlador {
 	private int cont=0;
 	
 	public Vehiculo devuelvoVehiculoxPosicion(int index) {
+		
 		if(vecLista.length< index) {
 			return vecLista[index];
 			

@@ -10,11 +10,20 @@ public abstract class Vehiculo {
 	
 	public abstract void apagar (String tipo);	
 	public abstract void endender (Motor motor) ; 
-	public abstract void endender();
+//	public abstract void endender();
 	
 	
 	// crear constructor aqui ... 
 	
+	public Vehiculo() {
+		 
+	}
+
+	public Vehiculo(String marca, String modelo, String color) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.color = color;
+	}
 	
 	
 	
@@ -40,7 +49,7 @@ public abstract class Vehiculo {
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 	
 }
 
