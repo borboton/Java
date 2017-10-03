@@ -19,5 +19,10 @@ public class Auto extends Vehiculo{
 	@Override
 	public void apagar(String tipo) {
 	}
+
+	public void doblar() {
+		System.out.println("Estoy doblando class :  "  + getClass().getSimpleName());
+		
+	}
 	
 }
