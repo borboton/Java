@@ -23,13 +23,13 @@ public abstract class Vehiculo {
 		this.color = color;
 	}
 	
-	public abstract void encender(Motor motor);
-
 	public abstract void apagar(String tipo);
-
+	
 	// para la sobre-carga tambien aplicar en los metodos abstractos
 	public abstract void encender();
-
+	
+	public abstract void encender(Motor motor);
+	
 	public void tocarBocina() {
 		System.out.println("pi-pi");
 	}
