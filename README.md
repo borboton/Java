@@ -358,15 +358,22 @@ Cualquier otra clase puede crear instancias de la clase.
 -------------
 
 ##### Patrones de diseño 
-GOF patrones de diseño 
+
+GOF Patrones de diseño 
 Singleton patrones de diseño 
 
 Modelo: Esta capa representa todo lo que tiene que ver con el acceso a datos: guardar, actualizar, obtener datos, además todo el código de la lógica del negocio, básicamente son las clases Java y parte de la lógica de negocio.
-Clases : "Cuenta.java Persona.java"
-Vista: La vista tiene que ver con la presentación de datos del modelo y lo que ve el usuario, por lo general una vista es la representación visual de un modelo (POJO o clase java). Clase : "Test.java"
+
+Vista: La vista tiene que ver con la presentación de datos del modelo y lo que ve el usuario, por lo general una vista es la representación visual de un modelo 
+
 Por ejemplo el modelo usuario que es una clase en Java y que tiene como propiedades, nombre y apellido debe pertenecer a una vista en la que el usuario vea esas propiedades.
-Controlador: El controlador es el encargado de conectar el modelo con las vistas, funciona como un puente entre la vista y el modelo, el controlador recibe eventos generados por el usuario desde las vistas y se encargar de direccionar al modelo la petición respectiva. Clase : "Contenedor.java" 
+
+Controlador: El controlador es el encargado de conectar el modelo con las vistas, funciona como un puente entre la vista y el modelo.
+El controlador recibe eventos generados por el usuario desde las vistas y se encargar de direccionar al modelo la petición respectiva. 
+
+
 Por ejemplo el usuario quiere ver los clientes con apellido Álvarez, la petición va al controlador y el se encarga de utilizar el modelo adecuado y devolver ese modelo a la vista.
+
 Si te das cuenta en ningún momento interactúan directamente la vista con el modelo, esto también mantiene la seguridad en una aplicación.
 
 ##### ArrayList
