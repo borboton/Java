@@ -23,9 +23,9 @@ Los métodos de clase (static) tienen estas limitaciones:
 
 
 ```java
-public static Inmueble creoInmueble(TipoInmueble imueble) {
+public static Inmueble creoInmueble(TipoInmueble inmueble) {
 
-		switch (imueble) {
+		switch (inmueble) {
 		case CASA:
 			return new Casa();
 		case DEPARTAMENTO:
